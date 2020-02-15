@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Cap</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+
+    <style>
+        .dropcap span {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="uk-section">
+        <div class="uk-container uk-container-small">
+            <h2 class="uk-h1">Drop Cap</h2>
+            <p class="dropcap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque commodi recusandae, magnam non nihil vel
+                repellendus doloribus eveniet, repudiandae impedit officiis neque. Veritatis odit exercitationem
+                obcaecati debitis cupiditate atque earum!</p>
+        </div>
+    </section>
+
+    <script>
+
+        // Dropcap
+
+        const dropcap = document.querySelector('.dropcap');
+
+        if (dropcap) {
+            const dropcapText = dropcap.textContent.trim();
+
+            dropcap.innerHTML = `<span>${dropcapText.charAt(0)}</span>${dropcapText.substring(1)}`;
+        }
+
+    </script>
+</body>
+
+</html>
