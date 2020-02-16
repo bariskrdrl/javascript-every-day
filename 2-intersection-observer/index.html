@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intersection Observer</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+
+    <style>
+        .uk-grid > * {
+            opacity: 0;
+            transition: all .3s ease-in-out;
+            transform: translateX(-50%);
+        }
+
+        .uk-grid > *:nth-child(2) {
+            transition-delay: .1s;
+        }
+
+        .uk-grid > *:nth-child(3) {
+            transition-delay: .2s;
+        }
+
+        .uk-grid > *:nth-child(4) {
+            transition-delay: .3s;
+        }
+
+        .uk-active .uk-grid > * {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="uk-section uk-height-large">
+        <div class="uk-container">
+            <div class="uk-grid uk-grid-medium uk-child-width-1-4@m">
+                <div>
+                    <div class="uk-card uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Hover</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Default</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                        <h3 class="uk-card-title">Primary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+                        <h3 class="uk-card-title">Secondary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section uk-height-large">
+        <div class="uk-container">
+            <div class="uk-grid uk-grid-medium uk-child-width-1-4@m">
+                <div>
+                    <div class="uk-card uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Hover</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Default</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                        <h3 class="uk-card-title">Primary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+                        <h3 class="uk-card-title">Secondary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section uk-height-large">
+        <div class="uk-container">
+            <div class="uk-grid uk-grid-medium uk-child-width-1-4@m">
+                <div>
+                    <div class="uk-card uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Hover</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Default</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                        <h3 class="uk-card-title">Primary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+                        <h3 class="uk-card-title">Secondary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section uk-height-large">
+        <div class="uk-container">
+            <div class="uk-grid uk-grid-medium uk-child-width-1-4@m">
+                <div>
+                    <div class="uk-card uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Hover</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Default</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                        <h3 class="uk-card-title">Primary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+                        <h3 class="uk-card-title">Secondary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section uk-height-large">
+        <div class="uk-container">
+            <div class="uk-grid uk-grid-medium uk-child-width-1-4@m">
+                <div>
+                    <div class="uk-card uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Hover</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Default</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                        <h3 class="uk-card-title">Primary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+                        <h3 class="uk-card-title">Secondary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        const sections = document.querySelectorAll('section');
+
+        const options = {
+            root: null,
+            threshold: .3,
+            rootMargin: '100px'
+        };
+
+        const observer = new IntersectionObserver((entires, observer) => {
+            entires.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.toggle('uk-active');
+
+                observer.unobserve(entry.target);
+
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+    </script>
+</body>
+
+</html>
