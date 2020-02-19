@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+</head>
+
+<body>
+    <section class="uk-section uk-height-large">
+        <div class="uk-container">
+            <ul class="uk-list" id="uk-list"></ul>
+        </div>
+    </section>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+
+    <script>
+        const ukList = document.getElementById('uk-list');
+
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then((response) => {
+                return response.json();
+            })
+            .then((users) => {
+                users.map(user => {
+                    ukList.innerHTML +=
+                    `
+                        <li>
+                            <div class="uk-grid uk-child-width-auto@s" uk-grid>
+                                <div class="uk-width-large@m">
+                                    <span class="uk-margin-small-right" uk-icon="user"></span> ${user.name} ${user.userName}
+                                </div>
+
+                                <div class="uk-width-auto@m">
+                                    <span class="uk-margin-small-right" uk-icon="mail"></span> <a href="mailto:${user.email}" class="uk-link-text">${user.email}</a>
+                                </div>
+                            </div>
+                        <li>
+                    `
+                });
+            })
+            .catch((error) => console.log('Cannot get data'));
+    </script>
+</body>
+
+</html>
