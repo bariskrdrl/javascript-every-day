@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Concat</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+</head>
+
+<body>
+    <section class="uk-section uk-height-large">
+        <div class="uk-container">
+            <ul class="uk-list" id="uk-list"></ul>
+        </div>
+    </section>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+
+    <script>
+        
+        const listOne = [1, 2, 3, 4, 5, 6];
+        const listTwo = [7, 8, 9, 10, 11, 12];
+        const listConcat = [...listOne, ...listTwo]
+
+        const element = document.getElementById('uk-list');
+        const fragment = document.createDocumentFragment();
+
+        listConcat.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            fragment.appendChild(li);
+        });
+        
+        element.appendChild(fragment);
+
+    </script>
+</body>
+
+</html>
