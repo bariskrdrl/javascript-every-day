@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+</head>
+
+<body>
+    <section class="uk-section uk-height-large">
+        <div class="uk-container">
+            <time datetime="" class="uk-label uk-label-primary" id="time"></time>
+        </div>
+    </section>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+
+    <script>
+        
+        const element = document.getElementById('time');
+
+        const date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        const year = date.getFullYear();
+        
+        if(day < 10) day = `0${day}`;
+        if(month < 10) month = `0${month}`;
+
+        const today = `${day}.${month}.${year}`;
+
+        element.setAttribute('datetime', today);
+        element.textContent = today;
+        
+    </script>
+</body>
+
+</html>
