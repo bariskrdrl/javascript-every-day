@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+</head>
+
+<body>
+    <section class="uk-section uk-height-large">
+        <div class="uk-container">
+            <div class="uk-grid" uk-grid>
+                <div class="uk-width-1-1">
+                    <h1 class="uk-heading-divider">Course App</h1>
+                </div>
+                <div class="uk-width-2-5@m">
+                    <form id="new-course">
+                        <div class="uk-margin">
+                            <input id="title" class="uk-input" type="text" placeholder="Course Title">
+                        </div>
+
+                        <div class="uk-margin">
+                            <input id="instructor" class="uk-input" type="text" placeholder="Instructor">
+                        </div>
+
+                        <div class="uk-margin">
+                            <input id="image" class="uk-input" type="text" placeholder="Image">
+                        </div>
+
+                        <div class="uk-margin">
+                            <button type="submit" class="uk-button uk-button-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="uk-width-3-5@m">
+                    <table class="uk-table uk-table-divider uk-table-striped uk-table-hover">
+                        <thead>
+                            <tr>
+                                <th width="200">Image</th>
+                                <th width="200">Title</th>
+                                <th width="130">Instructor</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="course-list">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
