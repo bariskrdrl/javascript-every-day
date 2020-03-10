@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+</head>
+
+<body>
+    <section class="uk-section uk-height-large">
+        <div class="uk-container">
+            <div class="uk-width-large@m uk-margin-auto">
+                <form class="app">
+                    <fieldset class="uk-fieldset">
+                
+                        <legend class="uk-legend">Todo List</legend>
+                
+                        <div class="uk-margin uk-grid uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-expand@m">
+                                <input id="add-input" class="uk-input" type="text" placeholder="Add Item">
+                            </div>
+                            <div class="uk-width-auto@m">
+                                <a href="#" class="uk-icon uk-text-primary add-todo" uk-icon="icon: plus;"></a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+    
+                <ul class="uk-list todos">
+                    <li>
+                        <div class="uk-grid uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-expand@m">
+                                <label for="todo-1"><input id="todo-1" class="uk-checkbox uk-margin-small-right" type="checkbox"> Look up things to do</label>
+                            </div>
+    
+                            <div class="uk-width-auto@m">
+                                <button class="uk-button uk-button-link uk-text-danger delete">
+                                    <span class="uk-disabled" uk-icon="icon: trash;"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="uk-grid uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-expand@m">
+                                <label for="todo-2"><input id="todo-2" class="uk-checkbox uk-margin-small-right" type="checkbox"> Buy Flight Tickets</label>
+                            </div>
+    
+                            <div class="uk-width-auto@m">
+                                <button class="uk-button uk-button-link uk-text-danger delete">
+                                    <span class="uk-disabled" uk-icon="icon: trash;"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
